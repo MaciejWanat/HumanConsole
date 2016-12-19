@@ -4,7 +4,6 @@ with open('resources/dict.tsv', 'r') as f:
     programs_names = [r.split() for r in f]
 
 subDict = { re.sub('\|', ' ',k[0]): k[1] for k in programs_names }
-print(subDict)
 
 def subs(string):
     if string in subDict:
