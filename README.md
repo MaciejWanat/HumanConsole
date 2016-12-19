@@ -36,7 +36,7 @@ Testowany na Office 2010.
 Pliki:
 - consolePL.py - polska wersja konsoli (pełna funkcjonalność)
 - console.py - angielska wersja konsoli (wczesna wersja rozwojowa)
-- sub.py - plik z funkcją pomocniczą zamieniającą nazwy programów na nazwy procesów i funkcją usuwającą polskie znaki
+- sub.py - plik z funkcją pomocniczą zamieniającą nazwy programów na nazwy procesów i funkcję usuwającą polskie znaki
 - resources/regex.txt - plik zawierający definicje tokenów
 - resources/dict.tsv - plik zawierający słownik dla sub.py
 
