@@ -3,7 +3,11 @@ subDict = {
     'word' : 'winword',
     'internet explorer' : 'iexplore',
     'internetexplorer' : 'iexplore',
-    'wiersz polecenia' : 'cmd'
+    'wiersz polecenia' : 'cmd',
+    'wiersz polecen' : 'cmd',
+    'wiersz poleceń' : 'cmd',
+    'sublime text' : 'sublime_text',
+    'paint' : 'mspaint',
 }
 
 def subs(string):

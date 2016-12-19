@@ -29,7 +29,7 @@ lexer = lex.lex()
 # funkcje otwierające/zamykające
 def onWWW(t):
     t = subs(t)
-    searchwww = re.search('www\.', t)
+    searchwww = re.search(r'(www\.|http|\.pl|\.com)', t)
     if not searchwww:
         os.system("start " + t)
     else:
@@ -49,24 +49,24 @@ def cExe(t):
 
 #single
 def p_statement_open(t):
-    'statement : OPEN PATH'
+    'expression : OPEN PATH'
     print("Otwieram " + t[2])
     onWWW(t[2])
 
 def p_statement_close(t):
-    'statement : CLOSE PATH'
+    'expression : CLOSE PATH'
     print("Zamykam program " + t[2])
     cExe(t[2])
 
 #multiple
 def p_statement_open_m(t):
-    'statement : OPEN PATH AND PATH'
+    'expression : OPEN PATH AND PATH'
     print("Otwieram " + t[2] + " oraz " + t[4])
     onWWW(t[2])
     onWWW(t[4])
 
 def p_statement_close_m(t):
-    'statement : CLOSE PATH AND PATH'
+    'expression : CLOSE PATH AND PATH'
     print("Zamykam program " + t[2] + " oraz program "+ t[4])
     cExe(t[2])
     cExe(t[4])
