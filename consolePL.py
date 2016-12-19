@@ -11,10 +11,12 @@ tokens = (
 
 # Tokens
 
-t_AND = r'(i|oraz)'
-t_CLOSE = r'(zamknij|zako[nń]cz|zamkn[ąa][cć]|zako[nń]czy[cć])'
-t_OPEN = r'(otw[oó]rz|uruchom|otw[oó]rzy[cć]|uruchomi[cć])'
-t_PATH = r'(?!(i|oraz|zamknij|zako[nń]cz|zamkn[ąa][cć]|zako[nń]czy[cć]|otw[oó]rz|uruchom|otw[oó]rzy[cć]|uruchomi[cć])\b)\b(\S+)\b' #match everything except for the beggining words
+t_AND = r'\b(i|oraz)\b'
+t_CLOSE = r'\b(zamknij|zako[nń]cz|zamkn[ąa][cć]|zako[nń]czy[cć])\b'
+t_OPEN = r'\b(otw[oó]rz|uruchom|otw[oó]rzy[cć]|uruchomi[cć])\b'
+#t_PATH = r'(?!(i|oraz|zamknij|zako[nń]cz|zamkn[ąa][cć]|zako[nń]czy[cć]|otw[oó]rz|uruchom|otw[oó]rzy[cć]|uruchomi[cć])\b)\b(\S+)\b' #match everything except for the beggining words
+#another approach
+t_PATH = r'\b(\S+:\\\S+|putty|cmd|sublime\stext|wiersz\spolece(n|ń)|internet\sexplorer|word|access|accessa|worda|paint|painta|excel|excela|notepad|notatnik|firefox|firefoxa|chrome|\S+www\.\S+|\S+http\S+|\S+\.pl|\S+\.com)\b'
 
 def t_error(t):
     t.lexer.skip(1)
@@ -42,7 +44,7 @@ def cExe(t):
         t = subs(t)
     else:
         t = subs(t[:3])
-    os.system("taskkill /IM " + t + ".exe" + " >nul")
+    os.system("taskkill /F /IM " + t + ".exe" + " >nul")
     return
 
 # parser
@@ -72,7 +74,7 @@ def p_statement_close_m(t):
     cExe(t[4])
 
 def p_error(t):
-    pass
+    print('Nieznana składnia')
 
 import ply.yacc as yacc
 parser = yacc.yacc()

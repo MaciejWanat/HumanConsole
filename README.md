@@ -11,15 +11,26 @@ Funkcjonalność:
 - zamykanie programów
 
 Przykładowe wejście:
-- czy mógłbyś otworzyć notatnik
-- proszę otwórz paint i word
-- zamknij paint i word
-- uruchom www.google.pl
-- otwórz C:\temp\a.txt
+- czy mógłbyś otworzyć notatnik, proszę?
+- prosze otwórz painta i jeśli byś mógł, to również worda
+- teraz zamknij painta i worda
+- czy mógłyś uruchomić www.google.pl?
+- otwórz mi plik C:\temp\a.txt
+
+Obsługiwane programy (wersja z tokenizacją konkretnych programów, linia 19):
+- notatnik
+- word
+- excel
+- access
+- wiersz poleceń (cmd)
+- sublime text
+- putty
+- chrome
+- firefox
 
 Pliki:
 - consolePL.py - polska wersja konsoli (pełna funkcjonalność)
-- console.py - angielska wersja konsoli (brak pełnej funkcjonalności)
+- console.py - angielska wersja konsoli (wczesna wersja rozwojowa)
 - sub.py - plik z funkcją pomocniczą zamieniającą nazwy programów na nazwy procesów 
 
 # Human Console
