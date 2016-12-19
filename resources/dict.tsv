@@ -1,10 +1,9 @@
 notatnik	notepad
 word	winword
-internet explorer   iexplore
+internet|explorer   iexplore
 internetexplorer  iexplore
-wiersz polecenia  cmd
-wiersz polecen  cmd
-wiersz poleceń  cmd
+wiersz|polecenia  cmd
+wiersz|polecen  cmd
 sublime text    sublime_text
 paint	mspaint
 painta	mspaint
@@ -19,3 +18,5 @@ skajpa	Skype
 skajp	Skype
 steam	Steam
 steama  Steam
+przegladarka iexplore
+przegladarke iexplore

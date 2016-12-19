@@ -2,6 +2,7 @@ import os
 import re
 import webbrowser
 from sub import subs
+from sub import polishDel
 import linecache
 
 #WINDOWS VER
@@ -39,11 +40,11 @@ def onWWW(t):
     return
 
 def cExe(t):
-    searchexe = re.search ('\.exe', t)
+    searchexe = re.search('\.exe', t)
     if not searchexe:
-        t = subs(t)
+        t = polishDel(subs(t))
     else:
-        t = subs(t[:3])
+        t = polishDel(subs(t[:3]))
     os.system("taskkill /F /IM " + t + ".exe" + " >nul")
     return
 
