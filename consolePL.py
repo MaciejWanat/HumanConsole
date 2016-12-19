@@ -11,10 +11,10 @@ tokens = (
 )
 
 # Tokens
-t_AND = r'\b(' + re.sub(' ','|',linecache.getline('regex.txt', 1)[:-1]) + r')\b'
-t_CLOSE = r'\b(' + re.sub(' ','|',linecache.getline('regex.txt', 2)[:-1]) + r')\b'
-t_OPEN = r'\b(' + re.sub(' ','|',linecache.getline('regex.txt', 3)[:-1]) + r')\b'
-t_PATH = r'\b(' + re.sub(' ','|',linecache.getline('regex.txt', 4)[:-1]) + r')\b'
+t_AND = r'\b(' + re.sub(' ','|',linecache.getline('resources/regex.txt', 1)[:-1]) + r')\b'
+t_CLOSE = r'\b(' + re.sub(' ','|',linecache.getline('resources/regex.txt', 2)[:-1]) + r')\b'
+t_OPEN = r'\b(' + re.sub(' ','|',linecache.getline('resources/regex.txt', 3)[:-1]) + r')\b'
+t_PATH = r'\b(' + re.sub(' ','|',linecache.getline('resources/regex.txt', 4)[:-1]) + r')\b'
 #t_PATH = r'\b(' + re.sub(' ','|',linecache.getline('regex.txt', 5)[:-1]) + r')\b' another approach
 
 

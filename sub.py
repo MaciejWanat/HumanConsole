@@ -1,26 +1,7 @@
-subDict = {
-    'notatnik' : 'notepad',
-    'word' : 'winword',
-    'internet explorer' : 'iexplore',
-    'internetexplorer' : 'iexplore',
-    'wiersz polecenia' : 'cmd',
-    'wiersz polecen' : 'cmd',
-    'wiersz poleceń' : 'cmd',
-    'sublime text' : 'sublime_text',
-    'paint' : 'mspaint',
-    'painta' : 'mspaint',
-    'worda' : 'msword',
-    'excel' : 'EXCEL',
-    'excela' : 'EXCEL',
-    'access' : 'msaccess',
-    'accessa' : 'msaccess',
-    'filezille' : 'filezilla',
-    'skype' : 'Skype',
-    'skajpa' : 'Skype',
-    'skajp' : 'Skype',
-    'steam' : 'Steam',
-    'steama' : 'Steam'
-}
+with open('resources/dict.tsv', 'r') as f:
+    programs_names = [r.split() for r in f]
+
+subDict = { k[0]: k[1] for k in programs_names }
 
 def subs(string):
     if string in subDict:

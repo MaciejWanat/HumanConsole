@@ -37,17 +37,18 @@ Pliki:
 - consolePL.py - polska wersja konsoli (pełna funkcjonalność)
 - console.py - angielska wersja konsoli (wczesna wersja rozwojowa)
 - sub.py - plik z funkcją pomocniczą zamieniającą nazwy programów na nazwy procesów 
-- regex.txt - plik zawierający definicje tokenów
+- resources/regex.txt - plik zawierający definicje tokenów
+- resources/dict.tsv - plik zawierający słownik dla sub.py
 
 # Human Console
 
 It's a program that processes natural language input and executes it.
-Works on Windows platfrom. Program works with PLY lexer & parser.
+It works on Windows platfrom, using PLY lexer & parser.
 
 Features:
 - turning programs on
-- executing files (if path is given)
-- opening links (if link is given)
+- executing files (if a path is given)
+- opening links (if a link is given)
 - opening more than one program with one command
 - closing programs
 
@@ -61,4 +62,5 @@ Files:
 - consolePL.py - polish version of human console (full functionality)
 - console.py - english version of human console (low functionality)
 - sub.py - file with function that switches names of programs for names of processes
-- regex.txt - file containing token definitions
+- resources/regex.txt - file containing token definitions
+- resources/dict.tsv - file containing dictionary for sub.py
