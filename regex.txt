@@ -1,0 +1,5 @@
+﻿i oraz
+zamknij zako[nń]cz zamkn[ąa][cć] zako[nń]czy[cć]
+otw[oó]rz uruchom otw[oó]rzy[cć] uruchomi[cć]
+\S+:\\\S+ putty cmd sublime\stext wiersz\spolece(n|ń) internet\sexplorer word access accessa worda paint painta excel excela notepad notatnik firefox firefoxa chrome \S+www\.\S+ \S+http\S+ \S+\.pl \S+\.com
+r'(?!(i oraz zamknij zako[nń]cz zamkn[ąa][cć] zako[nń]czy[cć] otw[oó]rz uruchom otw[oó]rzy[cć] uruchomi[cć])\b)\b(\S+)\b' #match everything except for the beggining words

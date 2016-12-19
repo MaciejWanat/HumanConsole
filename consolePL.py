@@ -2,6 +2,7 @@ import os
 import re
 import webbrowser
 from sub import subs
+import linecache
 
 #WINDOWS VER
 
@@ -10,13 +11,12 @@ tokens = (
 )
 
 # Tokens
+t_AND = r'\b(' + re.sub(' ','|',linecache.getline('regex.txt', 1)[:-1]) + r')\b'
+t_CLOSE = r'\b(' + re.sub(' ','|',linecache.getline('regex.txt', 2)[:-1]) + r')\b'
+t_OPEN = r'\b(' + re.sub(' ','|',linecache.getline('regex.txt', 3)[:-1]) + r')\b'
+t_PATH = r'\b(' + re.sub(' ','|',linecache.getline('regex.txt', 4)[:-1]) + r')\b'
+#t_PATH = r'\b(' + re.sub(' ','|',linecache.getline('regex.txt', 5)[:-1]) + r')\b' another approach
 
-t_AND = r'\b(i|oraz)\b'
-t_CLOSE = r'\b(zamknij|zako[nń]cz|zamkn[ąa][cć]|zako[nń]czy[cć])\b'
-t_OPEN = r'\b(otw[oó]rz|uruchom|otw[oó]rzy[cć]|uruchomi[cć])\b'
-#t_PATH = r'(?!(i|oraz|zamknij|zako[nń]cz|zamkn[ąa][cć]|zako[nń]czy[cć]|otw[oó]rz|uruchom|otw[oó]rzy[cć]|uruchomi[cć])\b)\b(\S+)\b' #match everything except for the beggining words
-#another approach
-t_PATH = r'\b(\S+:\\\S+|putty|cmd|sublime\stext|wiersz\spolece(n|ń)|internet\sexplorer|word|access|accessa|worda|paint|painta|excel|excela|notepad|notatnik|firefox|firefoxa|chrome|\S+www\.\S+|\S+http\S+|\S+\.pl|\S+\.com)\b'
 
 def t_error(t):
     t.lexer.skip(1)

@@ -17,7 +17,7 @@ Przykładowe wejście:
 - czy mógłyś uruchomić www.google.pl?
 - otwórz mi plik C:\temp\a.txt
 
-Obsługiwane programy (wersja z tokenizacją konkretnych programów, linia 19):
+Obsługiwane programy (wersja z tokenizacją konkretnych programów, linia 18):
 - notatnik
 - word
 - excel
@@ -32,6 +32,7 @@ Pliki:
 - consolePL.py - polska wersja konsoli (pełna funkcjonalność)
 - console.py - angielska wersja konsoli (wczesna wersja rozwojowa)
 - sub.py - plik z funkcją pomocniczą zamieniającą nazwy programów na nazwy procesów 
+- regex.txt - plik zawierający definicje tokenów
 
 # Human Console
 
@@ -55,3 +56,4 @@ Files:
 - consolePL.py - polish version of human console (full functionality)
 - console.py - english version of human console (low functionality)
 - sub.py - file with function that switches names of programs for names of processes
+- regex.txt - file containing token definitions
