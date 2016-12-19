@@ -17,7 +17,7 @@ Przykładowe wejście:
 - czy mógłyś uruchomić www.google.pl?
 - otwórz mi plik C:\temp\a.txt
 
-Obsługiwane programy (wersja z tokenizacją konkretnych programów, linia 18):
+Obsługiwane programy:
 - notatnik
 - word
 - excel
@@ -27,6 +27,11 @@ Obsługiwane programy (wersja z tokenizacją konkretnych programów, linia 18):
 - putty
 - chrome
 - firefox
+- filezilla
+- skype
+- steam
+
+Testowany na Office 2010.
 
 Pliki:
 - consolePL.py - polska wersja konsoli (pełna funkcjonalność)

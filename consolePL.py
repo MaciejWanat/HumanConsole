@@ -57,7 +57,7 @@ def p_statement_open(t):
 
 def p_statement_close(t):
     'expression : CLOSE PATH'
-    print("Zamykam program " + t[2])
+    print("Zamykam " + t[2])
     cExe(t[2])
 
 #multiple
@@ -69,7 +69,7 @@ def p_statement_open_m(t):
 
 def p_statement_close_m(t):
     'expression : CLOSE PATH AND PATH'
-    print("Zamykam program " + t[2] + " oraz program "+ t[4])
+    print("Zamykam " + t[2] + " oraz "+ t[4])
     cExe(t[2])
     cExe(t[4])
 
@@ -84,4 +84,4 @@ while True:
         s = input('humanConsole > ')   # Use raw_input on Python 2
     except EOFError:
         break
-    parser.parse(s)
+    parser.parse(s.lower())
