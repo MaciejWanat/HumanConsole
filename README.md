@@ -1,7 +1,7 @@
 # Ludzka konsola
 
 Jest to program w Pythonie który na wejściu przyjmuje polecenia w języku naturalnym, przetwarza je oraz wykonuje.
-Jest on przeznaczony pod platformę Windows. Program działa zapomocą lexera i parsera PLY.
+Jest on przeznaczony <b>pod platformę Windows</b>. Program działa zapomocą lexera i parsera PLY.
 
 Funkcjonalność:
 - uruchamianie programów
